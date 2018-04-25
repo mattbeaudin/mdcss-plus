@@ -5,12 +5,40 @@ body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
+  background: #fefefe;
   color: #24292e;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.5;
   word-wrap: break-word;
   margin: 0; }
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 20px 30px;
+  background: #fefefe;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+  nav .nav-link {
+    margin-right: 20px;
+    color: #24292e; }
+    nav .nav-link:hover, nav .nav-link:active {
+      color: #4a545f;
+      text-decoration: none; }
+  nav .nav-brand {
+    font-size: 18px;
+    font-weight: 600; }
+  nav.nav-dark {
+    background: #24292e; }
+    nav.nav-dark .nav-link {
+      color: #fefefe; }
+      nav.nav-dark .nav-link:hover, nav.nav-dark .nav-link:active {
+        color: lightgray; }
+  nav .nav-right {
+    float: right; }
+  nav .nav-left, nav .nav-right {
+    display: inline-block; }
 
 .pl-c {
   color: #6a737d; }
@@ -308,10 +336,6 @@ pre {
 
 .markdown-body > *:last-child {
   margin-bottom: 0 !important; }
-
-a:not([href]) {
-  color: inherit;
-  text-decoration: none; }
 
 .anchor {
   float: left;

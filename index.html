@@ -53,20 +53,8 @@
         </li>
         <li>
           <p>And another item.</p>
-          <p>You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).</p>
-          <p>
-            To have a line break without a paragraph, you will need to use two trailing spaces.
-            Note that this line is separate, but within the same paragraph.
-            (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
-          </p>
         </li>
       </ol>
-
-      <ul>
-        <li>Unordered list can use asterisks</li>
-        <li>Or minuses</li>
-        <li><p>Or pluses</p></li>
-      </ul>
 
       <ol>
         <li>foo
@@ -142,7 +130,6 @@
 
       <h2>Links</h2>
 
-      <p><a href="https://www.google.com">I'm an inline-style link.</a></p>
       <p><a href="https://www.google.com" title="Google's Homepage">I'm an inline-style link with title.</a></p>
       <p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself.</a></p>
 <!--
@@ -220,6 +207,69 @@
         </li>
         <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="checked" disabled="disabled"> foo</li>
       </ul>
+
+      <h2>Navbar (Mobile coming soon...)</h2>
+
+      <h4>Light</h4>
+      <nav style="position: relative; z-index: 0;">
+        <div class="nav-left">
+          <a class="nav-link nav-brand" href="#">Brand</a>
+          <a class="nav-link" href="#">Link</a>
+        </div>
+        <div class="nav-right">
+          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Link</a>
+        </div>
+      </nav>
+
+      <h4>Dark</h4>
+      <nav class="nav-dark" style="position: relative; z-index: 0;">
+        <div class="nav-left">
+          <a class="nav-link nav-brand" href="#">Brand</a>
+          <a class="nav-link" href="#">Link</a>
+        </div>
+        <div class="nav-right">
+          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Link</a>
+        </div>
+      </nav>
+
+      <h2>Progress Bar</h2>
+
+      <h4>Primary</h4>
+      <div class="progress">
+        <span class="progress-bar" style="width:35%;">
+          35%
+        </span>
+      </div>
+
+      <h4>Warning</h4>
+      <div class="progress">
+        <span class="progress-bar progress-warning" style="width:50%;">
+          50%
+        </span>
+      </div>
+
+      <h4>Danger</h4>
+      <div class="progress">
+        <span class="progress-bar progress-danger" style="width:100%;">
+          100%
+        </span>
+      </div>
+
+      <h2>Buttons</h2>
+
+      <h4>Primary</h4>
+      <a class="btn" href="#">Click Me</a>
+
+      <h4>Warning</h4>
+      <a class="btn btn-warning" href="#">Click Me</a>
+
+      <h4>Danger</h4>
+      <a class="btn btn-danger" href="#">Click Me</a>
+
     </div>
   </body>
 </html>

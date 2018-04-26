@@ -201,24 +201,9 @@ nav {
 
 a {
   background-color: transparent;
-}
-
-a:active,
-a:hover {
-  outline-width: 0;
-}
-
-strong {
-  font-weight: inherit;
-}
-
-strong {
-  font-weight: bolder;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  &:active, &:hover {
+  	outline-width: 0;
+  }
 }
 
 img {
@@ -241,9 +226,6 @@ hr {
 input {
   font: inherit;
   margin: 0;
-}
-
-input {
   overflow: visible;
 }
 
@@ -265,10 +247,9 @@ input {
 a {
   color: #0366d6;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  &:hover {
+  	text-decoration: underline;
+  }
 }
 
 strong {
@@ -282,17 +263,17 @@ hr {
   background: transparent;
   border: 0;
   border-bottom: 1px solid #dfe2e5;
-}
 
-hr::before {
-  display: table;
-  content: "";
-}
+  &::before {
+  	display: table;
+  	content: "";
+  }
 
-hr::after {
-  display: table;
-  clear: both;
-  content: "";
+  &::after {
+  	display: table;
+  	clear: both;
+  	content: "";
+  }
 }
 
 table {
@@ -359,11 +340,10 @@ ol {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-}
 
-ol ol,
-ul ol {
-  list-style-type: lower-roman;
+  ol {
+  	list-style-type: lower-roman;
+  }
 }
 
 ul ul ol,
@@ -419,36 +399,6 @@ pre {
 
 .pl-6 {
   padding-left: 40px !important;
-}
-
-.markdown-body::before {
-  display: table;
-  content: "";
-}
-
-.markdown-body::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-.markdown-body>*:first-child {
-  margin-top: 0 !important;
-}
-
-.markdown-body>*:last-child {
-  margin-bottom: 0 !important;
-}
-
-.anchor {
-  float: left;
-  padding-right: 4px;
-  margin-left: -20px;
-  line-height: 1;
-}
-
-.anchor:focus {
-  outline: none;
 }
 
 p,
@@ -508,35 +458,6 @@ h6 {
   margin-bottom: 16px;
   font-weight: 600;
   line-height: 1.25;
-}
-
-h1 .octicon-link,
-h2 .octicon-link,
-h3 .octicon-link,
-h4 .octicon-link,
-h5 .octicon-link,
-h6 .octicon-link {
-  color: #1b1f23;
-  vertical-align: middle;
-  visibility: hidden;
-}
-
-h1:hover .anchor,
-h2:hover .anchor,
-h3:hover .anchor,
-h4:hover .anchor,
-h5:hover .anchor,
-h6:hover .anchor {
-  text-decoration: none;
-}
-
-h1:hover .anchor .octicon-link,
-h2:hover .anchor .octicon-link,
-h3:hover .anchor .octicon-link,
-h4:hover .anchor .octicon-link,
-h5:hover .anchor .octicon-link,
-h6:hover .anchor .octicon-link {
-  visibility: visible;
 }
 
 h1 {
@@ -639,14 +560,13 @@ img {
   max-width: 100%;
   box-sizing: content-box;
   background-color: #fff;
-}
 
-img[align=right] {
-  padding-left: 20px;
-}
-
-img[align=left] {
-  padding-right: 20px;
+  &:[align=right] {
+  	padding-left: 20px;
+  }
+  &:[align=left] {
+	  padding-right: 20px;
+	}
 }
 
 code {
@@ -659,16 +579,15 @@ code {
 
 pre {
   word-wrap: normal;
-}
-
-pre>code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
+  > code {
+	  padding: 0;
+	  margin: 0;
+	  font-size: 100%;
+	  word-break: normal;
+	  white-space: pre;
+	  background: transparent;
+	  border: 0;
+  }
 }
 
 .highlight {
@@ -750,12 +669,29 @@ hr {
 	max-width: 980px;
 	margin: 0 auto;
 	padding: 45px;
+
+	&::before {
+		display: table;
+		content: "";
+	}
+
+	&::after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+
+	> *:first-child {
+		margin-top: 0 !important;
+	}
+
+	> *:last-child {
+		margin-bottom: 0 !important;
+	}
 }
 
 @media (max-width: 767px) {
 	.content {
 		padding: 15px;
 	}
-
-
 }

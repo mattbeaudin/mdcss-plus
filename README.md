@@ -1,2 +1,9 @@
-# mdcss-plus
-Markdown CSS Plus, a CSS library that emulates the look of Github Markdown with a few more added features.
+# GitHub Markdown CSS+
+A CSS Library that emulates the GitHub Markdown style with some new added features.
+
+## Roadmap
+- [x] Desktop Navbar (Light/Dark)
+- [ ] Mobile Navbar (Light/Dark)
+- [ ] Footer
+- [ ] Buttons
+- [ ] Progress Bar

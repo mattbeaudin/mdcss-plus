@@ -24,7 +24,7 @@ nav {
     margin-right: 20px;
     color: #24292e; }
     nav .nav-link:hover, nav .nav-link:active {
-      color: #4a545f;
+      color: #3f4850;
       text-decoration: none; }
   nav .nav-brand {
     font-size: 18px;
@@ -34,7 +34,7 @@ nav {
     nav.nav-dark .nav-link {
       color: #fefefe; }
       nav.nav-dark .nav-link:hover, nav.nav-dark .nav-link:active {
-        color: lightgray; }
+        color: #dfdfdf; }
   nav .nav-right {
     float: right; }
   nav .nav-left, nav .nav-right {
@@ -146,20 +146,8 @@ nav {
 
 a {
   background-color: transparent; }
-
-a:active,
-a:hover {
-  outline-width: 0; }
-
-strong {
-  font-weight: inherit; }
-
-strong {
-  font-weight: bolder; }
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
+  a:active, a:hover {
+    outline-width: 0; }
 
 img {
   border-style: none; }
@@ -177,9 +165,7 @@ hr {
 
 input {
   font: inherit;
-  margin: 0; }
-
-input {
+  margin: 0;
   overflow: visible; }
 
 [type="checkbox"] {
@@ -196,10 +182,10 @@ input {
 
 a {
   color: #0366d6;
-  text-decoration: none; }
-
-a:hover {
-  text-decoration: underline; }
+  text-decoration: none;
+  transition: .5s; }
+  a:hover {
+    text-decoration: underline; }
 
 strong {
   font-weight: 600; }
@@ -211,15 +197,13 @@ hr {
   background: transparent;
   border: 0;
   border-bottom: 1px solid #dfe2e5; }
-
-hr::before {
-  display: table;
-  content: ""; }
-
-hr::after {
-  display: table;
-  clear: both;
-  content: ""; }
+  hr::before {
+    display: table;
+    content: ""; }
+  hr::after {
+    display: table;
+    clear: both;
+    content: ""; }
 
 table {
   border-spacing: 0;
@@ -274,10 +258,9 @@ ol {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0; }
-
-ol ol,
-ul ol {
-  list-style-type: lower-roman; }
+  ul ol,
+  ol ol {
+    list-style-type: lower-roman; }
 
 ul ul ol,
 ul ol ol,
@@ -297,6 +280,21 @@ pre {
   margin-bottom: 0;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 12px; }
+
+.progress {
+  background: #ececec;
+  border-radius: 3px; }
+  .progress .progress-bar {
+    background: #03A9F4;
+    padding: 2px;
+    text-align: center;
+    color: #fefefe;
+    display: block;
+    border-radius: 3px; }
+    .progress .progress-bar.progress-warning {
+      background: #FFC107; }
+    .progress .progress-bar.progress-danger {
+      background: #F44336; }
 
 .octicon {
   vertical-align: text-bottom; }
@@ -321,21 +319,6 @@ pre {
 
 .pl-6 {
   padding-left: 40px !important; }
-
-.content::before {
-  display: table;
-  content: ""; }
-
-.content::after {
-  display: table;
-  clear: both;
-  content: ""; }
-
-.content > *:first-child {
-  margin-top: 0 !important; }
-
-.content > *:last-child {
-  margin-bottom: 0 !important; }
 
 p,
 blockquote,
@@ -470,12 +453,29 @@ img {
   max-width: 100%;
   box-sizing: content-box;
   background-color: #fff; }
+  img[align=right] {
+    padding-left: 20px; }
+  img[align=left] {
+    padding-right: 20px; }
 
-img[align=right] {
-  padding-left: 20px; }
-
-img[align=left] {
-  padding-right: 20px; }
+.btn {
+  background: #03A9F4;
+  color: #fefefe;
+  padding: 10px 20px;
+  border-radius: 3px; }
+  .btn:hover, .btn:focus, .btn:active {
+    background: #027fb8;
+    text-decoration: none; }
+  .btn-warning {
+    background: #FFC107;
+    color: #fefefe; }
+    .btn-warning:hover, .btn-warning:focus, .btn-warning:active {
+      background: #c99700; }
+  .btn-danger {
+    background: #F44336;
+    color: #fefefe; }
+    .btn-danger:hover, .btn-danger:focus, .btn-danger:active {
+      background: #e11b0c; }
 
 code {
   padding: 0.2em 0.4em;
@@ -486,15 +486,14 @@ code {
 
 pre {
   word-wrap: normal; }
-
-pre > code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0; }
+  pre > code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0; }
 
 .highlight {
   margin-bottom: 16px; }
@@ -564,6 +563,17 @@ hr {
   max-width: 980px;
   margin: 0 auto;
   padding: 45px; }
+  .content::before {
+    display: table;
+    content: ""; }
+  .content::after {
+    display: table;
+    clear: both;
+    content: ""; }
+  .content > *:first-child {
+    margin-top: 0 !important; }
+  .content > *:last-child {
+    margin-bottom: 0 !important; }
 
 @media (max-width: 767px) {
   .content {

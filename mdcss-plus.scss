@@ -74,6 +74,17 @@ nav {
 	}
 }
 
+a {
+  background-color: transparent;
+  &:active, &:hover {
+  	outline-width: 0;
+  }
+}
+
+img {
+  border-style: none;
+}
+
 code,
 kbd,
 pre {
@@ -84,6 +95,15 @@ pre {
 input {
   font: inherit;
   margin: 0;
+  overflow: visible;
+}
+
+[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -242,8 +262,7 @@ blockquote,
 ul,
 ol,
 dl,
-table,
-pre {
+table {
   margin-top: 0;
   margin-bottom: 16px;
 }

@@ -477,50 +477,14 @@ img {
     .btn-danger:hover, .btn-danger:focus, .btn-danger:active {
       background: #e11b0c; }
 
-code {
-  padding: 0.2em 0.4em;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(27, 31, 35, 0.05);
-  border-radius: 3px; }
-
-pre {
-  word-wrap: normal; }
-  pre > code {
-    padding: 0;
-    margin: 0;
-    font-size: 100%;
-    word-break: normal;
-    white-space: pre;
-    background: transparent;
-    border: 0; }
-
-.highlight {
-  margin-bottom: 16px; }
-
-.highlight pre {
-  margin-bottom: 0;
-  word-break: normal; }
-
-.highlight pre,
 pre {
   padding: 16px;
   overflow: auto;
+  white-space: pre-line;
   font-size: 85%;
   line-height: 1.45;
   background-color: #f6f8fa;
   border-radius: 3px; }
-
-pre code {
-  display: inline;
-  max-width: auto;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0; }
 
 .full-commit .btn-outline:not(:disabled):hover {
   color: #005cc5;

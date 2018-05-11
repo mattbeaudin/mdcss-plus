@@ -9,7 +9,6 @@ body {
   color: #24292e;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
-  line-height: 1.5;
   word-wrap: break-word;
   margin: 0; }
 
@@ -175,7 +174,8 @@ code {
 
 .progress {
   background: #ececec;
-  border-radius: 3px; }
+  border-radius: 3px;
+  margin-bottom: 5px; }
   .progress .progress-bar {
     background: #03A9F4;
     padding: 2px;
@@ -183,6 +183,8 @@ code {
     color: #fefefe;
     display: block;
     border-radius: 3px; }
+    .progress .progress-bar.progress-success {
+      background: #69d246; }
     .progress .progress-bar.progress-warning {
       background: #FFC107; }
     .progress .progress-bar.progress-danger {
@@ -270,6 +272,11 @@ img {
   .btn:hover, .btn:focus, .btn:active {
     background: #027fb8;
     text-decoration: none; }
+  .btn-success {
+    background: #69d246;
+    color: #fefefe; }
+    .btn-success:hover, .btn-success:focus, .btn-success:active {
+      background: #4cb02b; }
   .btn-warning {
     background: #FFC107;
     color: #fefefe; }

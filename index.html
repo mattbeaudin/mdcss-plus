@@ -30,7 +30,7 @@
       <h5>H5</h5>
       <h6>H6</h6>
 
-      <h4>Code</h4>
+      <h4>HTML</h4>
       <pre>
         &lt;h1&gt;H1&lt;/h1&gt;
         &lt;h2&gt;H2&lt;/h2&gt;
@@ -46,7 +46,7 @@
       <p><strong>Bold</strong></p>
       <p><del>Scratch</del></p>
 
-      <h4>Code</h4>
+      <h4>HTML</h4>
       <pre>
         &lt;p&gt;&lt;em&gt;Italics&lt;/em&gt;&lt;/p&gt;
         &lt;p&gt;&lt;strong&gt;Bold&lt;/strong&gt;&lt;/p&gt;
@@ -76,7 +76,7 @@
 
       <p>To reboot your computer, press <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>del</kbd>.</p>
 
-      <h4>Code</h4>
+      <h4>HTML</h4>
       <pre>
         &lt;p&gt;To reboot your computer, press &lt;kbd&gt;ctrl&lt;/kbd&gt; + &lt;kbd&gt;alt&lt;/kbd&gt; + &lt;kbd&gt;del&lt;/kbd&gt;.&lt;/p&gt;
       </pre>
@@ -127,7 +127,7 @@
         </p>
       </blockquote>
 
-      <h4>Code</h4>
+      <h4>HTML</h4>
       <pre>
         &lt;blockquote&gt;
           &lt;p&gt;
@@ -138,9 +138,10 @@
 
       <h2>Horizontal Rule</h2>
 
-      <pre>&lt;hr&gt;</pre>
-
       <hr>
+
+      <h4>HTML</h4>
+      <pre>&lt;hr&gt;</pre>
 
       <h2>Task List</h2>
 
@@ -149,7 +150,7 @@
         <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="checked" disabled="disabled"> foo</li>
       </ul>
 
-      <h4>Code</h4>
+      <h4>HTML</h4>
       <pre>
         &lt;ul class="task-list"&gt;
           &lt;li class="task-list-item"&gt;&lt;input type="checkbox" class="task-list-item-checkbox" disabled="disabled"&gt; foo&lt;/li&gt;
@@ -172,7 +173,7 @@
         </div>
       </nav>
 
-      <h4>Code</h4>
+      <h4>HTML</h4>
       <pre>
         &lt;nav&gt;
           &lt;div class="nav-left"&gt;
@@ -200,7 +201,7 @@
         </div>
       </nav>
 
-      <h4>Code</h4>
+      <h4>HTML</h4>
       <pre>
         &lt;nav class="nav-dark"&gt;
         ...
@@ -216,14 +217,12 @@
         </span>
       </div>
 
-      <h4>Code</h4>
-      <pre>
-        &lt;div class="progress"&gt;
-        &lt;span class="progress-bar" style="width:35%;"&gt;
-        35%
-        &lt;/span&gt;
-        &lt;/div&gt;
-      </pre>
+      <h4>Success</h4>
+      <div class="progress">
+        <span class="progress-bar progress-success" style="width:100%;">
+          100%
+        </span>
+      </div>
 
       <h4>Warning</h4>
       <div class="progress">
@@ -232,29 +231,32 @@
         </span>
       </div>
 
-      <h4>Code</h4>
-      <pre>
-        &lt;div class="progress"&gt;
-        &lt;span class="progress-bar progress-warning" style="width:50%;"&gt;
-        50%
-        &lt;/span&gt;
-        &lt;/div&gt;
-      </pre>
-
       <h4>Danger</h4>
       <div class="progress">
-        <span class="progress-bar progress-danger" style="width:100%;">
-          100%
+        <span class="progress-bar progress-danger" style="width:75%;">
+          75%
         </span>
       </div>
 
-      <h4>Code</h4>
+      <h4>HTML</h4>
       <pre>
         &lt;div class="progress"&gt;
-        &lt;span class="progress-bar progress-danger" style="width:100%;"&gt;
-        100%
+        &lt;span class="progress-bar" style="width:35%;"&gt;
+        35%
         &lt;/span&gt;
         &lt;/div&gt;
+
+        ...
+        &lt;span class="progress-bar progress-success" style="width:100%;"&gt;
+        ...
+
+        ...
+        &lt;span class="progress-bar progress-warning" style="width:50%;"&gt;
+        ...
+
+        ...
+        &lt;span class="progress-bar progress-danger" style="width:75%;"&gt;
+        ...
       </pre>
 
       <h2>Buttons</h2>
@@ -262,24 +264,20 @@
       <h4>Primary</h4>
       <a class="btn" href="#">Click Me</a>
 
-      <h4>Code</h4>
-      <pre>
-        &lt;a class="btn" href="#"&gt;Click Me&lt;/a&gt;
-      </pre>
+      <h4>Success</h4>
+      <a class="btn btn-success" href="#">Click Me</a>
 
       <h4>Warning</h4>
       <a class="btn btn-warning" href="#">Click Me</a>
 
-      <h4>Code</h4>
-      <pre>
-        &lt;a class="btn btn-warning" href="#"&gt;Click Me&lt;/a&gt;
-      </pre>
-
       <h4>Danger</h4>
       <a class="btn btn-danger" href="#">Click Me</a>
 
-      <h4>Code</h4>
+      <h4>HTML</h4>
       <pre>
+        &lt;a class="btn" href="#"&gt;Click Me&lt;/a&gt;
+        &lt;a class="btn btn-success" href="#"&gt;Click Me&lt;/a&gt;
+        &lt;a class="btn btn-warning" href="#"&gt;Click Me&lt;/a&gt;
         &lt;a class="btn btn-danger" href="#"&gt;Click Me&lt;/a&gt;
       </pre>
     </div>

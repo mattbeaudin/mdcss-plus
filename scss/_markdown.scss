@@ -24,6 +24,20 @@ kbd {
   vertical-align: middle;
 }
 
+code,
+kbd,
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+code {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 2px 5px;
+}
+
 .task-list > li {
   list-style-type: none;
 
@@ -35,13 +49,6 @@ kbd {
     margin: 0 0.2em 0.25em -1.6em;
     vertical-align: middle;
   }
-}
-
-code,
-kbd,
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
 }
 
 .pl-e,

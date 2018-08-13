@@ -1,6 +1,15 @@
 <!doctype html>
 <html>
   <head>
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-91187449-1', 'auto');ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>GitHub Markdown CSS+</title>
@@ -17,6 +26,19 @@
       <h1>GitHub Markdown CSS+</h1>
 
       <p>A CSS Library that emulates the GitHub Markdown style with some new added features.</p>
+
+      <h2>Getting Started</h2>
+
+      <p>
+        Here's a few options to download this package:
+      </p>
+
+      <ul>
+        <li><a href="https://github.com/mattbeaudin/mdcss-plus/archive/v1.0.0.zip">Downloading the latest release</a></li>
+        <li>Cloning the repo: <code>git clone https://github.com/mattbeaudin/mdcss-plus.git</code></li>
+        <li>Install with npm: <code>npm install mdcss-plus</code></li>
+        <li>Install with yarn: <code>yarn add mdcss-plus</code></li>
+      </ul>
 
       <h2>Headers</h2>
 
@@ -67,7 +89,15 @@
         </li>
       </ol>
 
-      <h2>Inline HTML</h2>
+      <h2>Inline Code</h2>
+
+      <code>git commit -m "Added functionality that nobody will ever use."</code>
+
+      <pre>
+&lt;<span class="pl-ent">code</span>&gt;git commit -m "Added functionality that nobody will ever use."&lt;/<span class="pl-ent">code</span>&gt;
+      </pre>
+
+      <h2>Key Binds</h2>
 
       <p>To reboot your computer, press <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>del</kbd>.</p>
 

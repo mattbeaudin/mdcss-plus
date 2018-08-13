@@ -1,0 +1,24 @@
+{
+  "name": "mdcss-plus",
+  "version": "1.0.0",
+  "description": "SASS/CSS library that emulates the look of GitHub Markdown with a few more added features.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattbeaudin/mdcss-plus.git"
+  },
+  "keywords": [
+    "markdown",
+    "markdown-css",
+    "scss",
+    "sass"
+  ],
+  "author": "Matthew Beaudin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattbeaudin/mdcss-plus/issues"
+  },
+  "homepage": "https://matthewbeaud.in/mdcss-plus"
+}

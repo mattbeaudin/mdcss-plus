@@ -4,16 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>GitHub Markdown CSS+</title>
-    <link rel="stylesheet" href="mdcss-plus.css">
+    <link rel="stylesheet" href="dist/css/mdcss-plus.min.css">
   </head>
   <body>
     <nav class="nav-dark">
       <div class="nav-left">
         <a class="nav-link nav-brand" href="index.html">MarkDown CSS+</a>
         <a class="nav-link" href="https://github.com/mattbeaudin/mdcss-plus/">GitHub</a>
-      </div>
-      <div class="nav-right">
-        <a class="nav-link" href="http://matthewbeaud.in/">Portfolio</a>
       </div>
     </nav>
     <div class="content">
@@ -30,14 +27,13 @@
       <h5>H5</h5>
       <h6>H6</h6>
 
-      <h4>HTML</h4>
       <pre>
-        &lt;h1&gt;H1&lt;/h1&gt;
-        &lt;h2&gt;H2&lt;/h2&gt;
-        &lt;h3&gt;H3&lt;/h3&gt;
-        &lt;h4&gt;H4&lt;/h4&gt;
-        &lt;h5&gt;H5&lt;/h5&gt;
-        &lt;h6&gt;H6&lt;/h6&gt;
+&lt;<span class="pl-ent">h1</span>&gt;H1&lt;/<span class="pl-ent">h1</span>&gt;
+&lt;<span class="pl-ent">h2</span>&gt;H2&lt;/<span class="pl-ent">h2</span>&gt;
+&lt;<span class="pl-ent">h3</span>&gt;H3&lt;/<span class="pl-ent">h3</span>&gt;
+&lt;<span class="pl-ent">h4</span>&gt;H4&lt;/<span class="pl-ent">h4</span>&gt;
+&lt;<span class="pl-ent">h5</span>&gt;H5&lt;/<span class="pl-ent">h5</span>&gt;
+&lt;<span class="pl-ent">h6</span>&gt;H6&lt;/<span class="pl-ent">h6</span>&gt;
       </pre>
 
       <h2>Emphasis</h2>
@@ -46,11 +42,10 @@
       <p><strong>Bold</strong></p>
       <p><del>Scratch</del></p>
 
-      <h4>HTML</h4>
       <pre>
-        &lt;p&gt;&lt;em&gt;Italics&lt;/em&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;Bold&lt;/strong&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;del&gt;Stratch&lt;/del&gt;&lt;/p&gt;
+&lt;<span class="pl-ent">p</span>&gt;&lt;<span class="pl-ent">em</span>&gt;Italics&lt;/<span class="pl-ent">em</span>&gt;&lt;/<span class="pl-ent">p</span>&gt;
+&lt;<span class="pl-ent">p</span>&gt;&lt;<span class="pl-ent">strong</span>&gt;Bold&lt;/<span class="pl-ent">strong</span>&gt;&lt;/<span class="pl-ent">p</span>&gt;
+&lt;<span class="pl-ent">p</span>&gt;&lt;<span class="pl-ent">del</span>&gt;Stratch&lt;/<span class="pl-ent">del</span>&gt;&lt;/<span class="pl-ent">p</span>&gt;
       </pre>
 
       <h2>Lists</h2>
@@ -76,9 +71,8 @@
 
       <p>To reboot your computer, press <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>del</kbd>.</p>
 
-      <h4>HTML</h4>
       <pre>
-        &lt;p&gt;To reboot your computer, press &lt;kbd&gt;ctrl&lt;/kbd&gt; + &lt;kbd&gt;alt&lt;/kbd&gt; + &lt;kbd&gt;del&lt;/kbd&gt;.&lt;/p&gt;
+&lt;<span class="pl-ent">p</span>&gt;To reboot your computer, press &lt;<span class="pl-ent">kbd</span>&gt;ctrl&lt;/<span class="pl-ent">kbd</span>&gt; + &lt;<span class="pl-ent">kbd</span>&gt;alt&lt;/<span class="pl-ent">kbd</span>&gt; + &lt;<span class="pl-ent">kbd</span>&gt;del&lt;/<span class="pl-ent">kbd</span>&gt;.&lt;/<span class="pl-ent">p</span>&gt;
       </pre>
 
       <h2>Links</h2>
@@ -127,35 +121,42 @@
         </p>
       </blockquote>
 
-      <h4>HTML</h4>
       <pre>
-        &lt;blockquote&gt;
-          &lt;p&gt;
-            This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can &lt;em&gt;put&lt;/em&gt; &lt;strong&gt;Emphasis&lt;/strong&gt; into a blockquote.
-          &lt;/p&gt;
-        &lt;/blockquote&gt;
+&lt;<span class="pl-ent">blockquote</span>&gt;
+  &lt;<span class="pl-ent">p</span>&gt;
+    This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can &lt;<span class="pl-ent">em</span>&gt;put&lt;<span class="pl-ent">/em</span>&gt; &lt;<span class="pl-ent">strong</span>&gt;Emphasis&lt;<span class="pl-ent">/strong</span>&gt; into a blockquote.
+  &lt;<span class="pl-ent">/p</span>&gt;
+&lt;<span class="pl-ent">/blockquote</span>&gt;
       </pre>
 
       <h2>Horizontal Rule</h2>
 
       <hr>
 
-      <h4>HTML</h4>
-      <pre>&lt;hr&gt;</pre>
+      <pre>
+&lt;<span class="pl-ent">hr</span>&gt;
+      </pre>
 
       <h2>Task List</h2>
 
       <ul class="task-list">
-        <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled"> foo</li>
-        <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="checked" disabled="disabled"> foo</li>
+        <li>
+          <input type="checkbox" disabled="disabled"> foo
+        </li>
+        <li>
+          <input type="checkbox" checked="checked" disabled="disabled"> bar
+        </li>
       </ul>
 
-      <h4>HTML</h4>
       <pre>
-        &lt;ul class="task-list"&gt;
-          &lt;li class="task-list-item"&gt;&lt;input type="checkbox" class="task-list-item-checkbox" disabled="disabled"&gt; foo&lt;/li&gt;
-          &lt;li class="task-list-item"&gt;&lt;input type="checkbox" class="task-list-item-checkbox" checked="checked" disabled="disabled"&gt; foo&lt;/li&gt;
-        &lt;/ul&gt;
+&lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s">"task-list"</span>&gt;
+  &lt;<span class="pl-ent">li</span>&gt;
+    &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s">"checkbox"</span> <span class="pl-e">disabled</span>=<span class="pl-s">"disabled"</span>&gt; foo
+  &lt;/<span class="pl-ent">li</span>&gt;
+  &lt;<span class="pl-ent">li</span>&gt;
+    &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s">"checkbox"</span> <span class="pl-e">checked</span>=<span class="pl-s">"checked"</span> <span class="pl-e">disabled</span>=<span class="pl-s">"disabled"</span>&gt; bar
+  &lt;/<span class="pl-ent">li</span>&gt;
+&lt;/<span class="pl-ent">ul</span>&gt;
       </pre>
 
       <h2>Navbar (Mobile coming soon)</h2>
@@ -173,19 +174,18 @@
         </div>
       </nav>
 
-      <h4>HTML</h4>
       <pre>
-        &lt;nav&gt;
-          &lt;div class="nav-left"&gt;
-            &lt;a class="nav-link nav-brand" href="#">Brand&lt;/a&gt;
-            &lt;a class="nav-link" href="#">Link&lt;/a&gt;
-          &lt;/div&gt;
-          &lt;div class="nav-left"&gt;
-            &lt;a class="nav-link" href="#">Link&lt;/a&gt;
-            &lt;a class="nav-link" href="#">Link&lt;/a&gt;
-            &lt;a class="nav-link" href="#">Link&lt;/a&gt;
-          &lt;/div&gt;
-        &lt;/nav&gt;
+&lt;<span class="pl-ent">nav</span>&gt;
+  &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s">"nav-left"</span>&gt;
+    &lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>=<span class="pl-s">"nav-link nav-brand"</span> <span class="pl-e">href</span>=<span class="pl-s">"#"</span>>Brand&lt;/<span class="pl-ent">a</span>&gt;
+    &lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>=<span class="pl-s">"nav-link"</span> <span class="pl-e">href</span>=<span class="pl-s">"#"</span>>Link&lt;/<span class="pl-ent">a</span>&gt;
+  &lt;/<span class="pl-ent">div</span>&gt;
+  &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s">"nav-right"</span>&gt;
+    &lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>="nav-link" <span class="pl-e">href</span>=<span class="pl-s">"#"</span>>Link&lt;/<span class="pl-ent">a</span>&gt;
+    &lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>="nav-link" <span class="pl-e">href</span>=<span class="pl-s">"#"</span>>Link&lt;/<span class="pl-ent">a</span>&gt;
+    &lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>="nav-link" <span class="pl-e">href</span>=<span class="pl-s">"#"</span>>Link&lt;/<span class="pl-ent">a</span>&gt;
+  &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">nav</span>&gt;
       </pre>
 
       <h4>Dark</h4>
@@ -201,11 +201,10 @@
         </div>
       </nav>
 
-      <h4>HTML</h4>
       <pre>
-        &lt;nav class="nav-dark"&gt;
-        ...
-        &lt;/nav&gt;
+&lt;<span class="pl-ent">nav</span> <span class="pl-e">class</span>=<span class="pl-str">"nav-dark"</span>&gt;
+...
+&lt;/<span class="pl-ent">nav</span>&gt;
       </pre>
 
       <h2>Progress Bar</h2>
@@ -238,25 +237,24 @@
         </span>
       </div>
 
-      <h4>HTML</h4>
       <pre>
-        &lt;div class="progress"&gt;
-        &lt;span class="progress-bar" style="width:35%;"&gt;
-        35%
-        &lt;/span&gt;
-        &lt;/div&gt;
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s">"progress"</span>&gt;
+  &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s">"progress-bar"</span> <span class="pl-e">style</span>=<span class="pl-s">"width:35%;"</span>&gt;
+    35%
+  &lt;/<span class="pl-ent">span</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;
 
-        ...
-        &lt;span class="progress-bar progress-success" style="width:100%;"&gt;
-        ...
+...
+&lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s">"progress-bar progress-success"</span> <span class="pl-e">style</span>=<span class="pl-s">"width:100%;"</span>&gt;
+...
 
-        ...
-        &lt;span class="progress-bar progress-warning" style="width:50%;"&gt;
-        ...
+...
+&lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s">"progress-bar progress-warning"</span> <span class="pl-e">style</span>=<span class="pl-s">"width:50%;"</span>&gt;
+...
 
-        ...
-        &lt;span class="progress-bar progress-danger" style="width:75%;"&gt;
-        ...
+...
+&lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s">"progress-bar progress-danger"</span> <span class="pl-e">style</span>=<span class="pl-s">"width:75%;"</span>&gt;
+...
       </pre>
 
       <h2>Buttons</h2>
@@ -273,12 +271,11 @@
       <h4>Danger</h4>
       <a class="btn btn-danger" href="#">Click Me</a>
 
-      <h4>HTML</h4>
       <pre>
-        &lt;a class="btn" href="#"&gt;Click Me&lt;/a&gt;
-        &lt;a class="btn btn-success" href="#"&gt;Click Me&lt;/a&gt;
-        &lt;a class="btn btn-warning" href="#"&gt;Click Me&lt;/a&gt;
-        &lt;a class="btn btn-danger" href="#"&gt;Click Me&lt;/a&gt;
+&lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>=<span class="pl-s">"btn"</span> <span class="pl-e">href</span>=<span class="pl-s">"#"</span>&gt;Click Me&lt;/<span class="pl-ent">a</span>&gt;
+&lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>=<span class="pl-s">"btn btn-success"</span> <span class="pl-e">href</span>=<span class="pl-s">"#"</span>&gt;Click Me&lt;/<span class="pl-ent">a</span>&gt;
+&lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>=<span class="pl-s">"btn btn-warning"</span> <span class="pl-e">href</span>=<span class="pl-s">"#"</span>&gt;Click Me&lt;/<span class="pl-ent">a</span>&gt;
+&lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>=<span class="pl-s">"btn btn-danger"</span> <span class="pl-e">href</span>=<span class="pl-s">"#"</span>&gt;Click Me&lt;/<span class="pl-ent">a</span>&gt;
       </pre>
     </div>
   </body>

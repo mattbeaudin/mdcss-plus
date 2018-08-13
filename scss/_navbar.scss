@@ -1,0 +1,46 @@
+nav {
+	background: $nav-light-bg;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+	padding: 20px 30px;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+
+	.nav-link {
+		color: $nav-light-color;
+    margin-right: 20px;
+    
+    &:hover,
+    &:active {
+			color: lighten($nav-light-color, $link-hover-change);
+			text-decoration: none;
+		}
+	}
+
+	.nav-brand {
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	&.nav-dark {
+    background: $nav-dark-bg;
+    
+		.nav-link {
+      color: $nav-dark-color;
+      
+      &:hover,
+      &:active {
+				color: darken($nav-dark-color, $link-hover-change);
+			}
+		}
+	}
+
+	.nav-right {
+		float: right;
+	}
+
+  .nav-left,
+  .nav-right {
+		display: inline-block;
+	}
+}

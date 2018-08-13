@@ -1,6 +1,6 @@
 {
   "name": "mdcss-plus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SASS/CSS library that emulates the look of GitHub Markdown with a few more added features.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,50 +1,35 @@
-$font-color: #24292e;
-$background-color: #fefefe;
-
-$nav-light-bg: $background-color;
-$nav-light-color: $font-color;
-
-$nav-dark-bg: $font-color;
-$nav-dark-color: $background-color;
-
-$link-hover-change: 12%;
-
-$border-radius-base: 3px;
-
-$color-primary: #03A9F4;
-$color-success: #69d246;
-$color-warning: #FFC107;
-$color-danger: #F44336;
-
+@import "variables";
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
   background: $background-color;
   color: $font-color;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
-  word-wrap: break-word;
+  line-height: 1.5;
   margin: 0;
+  word-wrap: break-word;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 nav {
+	background: $nav-light-bg;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+	padding: 20px 30px;
 	position: sticky;
 	top: 0;
 	z-index: 1000;
-	padding: 20px 30px;
-	background: $nav-light-bg;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 
 	.nav-link {
-		margin-right: 20px;
 		color: $nav-light-color;
-		&:hover, &:active {
+    margin-right: 20px;
+    
+    &:hover,
+    &:active {
 			color: lighten($nav-light-color, $link-hover-change);
 			text-decoration: none;
 		}
@@ -56,10 +41,13 @@ nav {
 	}
 
 	&.nav-dark {
-		background: $nav-dark-bg;
+    background: $nav-dark-bg;
+    
 		.nav-link {
-			color: $nav-dark-color;
-			&:hover, &:active {
+      color: $nav-dark-color;
+      
+      &:hover,
+      &:active {
 				color: darken($nav-dark-color, $link-hover-change);
 			}
 		}
@@ -69,14 +57,17 @@ nav {
 		float: right;
 	}
 
-	.nav-left, .nav-right {
+  .nav-left,
+  .nav-right {
 		display: inline-block;
 	}
 }
 
 a {
   background-color: transparent;
-  &:active, &:hover {
+
+  &:active,
+  &:hover {
   	outline-width: 0;
   }
 }
@@ -107,6 +98,7 @@ input {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+
   &[type="checkbox"] {
     padding: 0;
   }
@@ -117,9 +109,11 @@ a {
   background: transparent;
   text-decoration: none;
   transition: .5s;
-  &:hover, &:active {
-  	text-decoration: underline;
+
+  &:hover,
+  &:active {
     outline-width: 0;
+  	text-decoration: underline;
   }
 }
 
@@ -128,30 +122,30 @@ strong {
 }
 
 hr {
-  height: 0.25em;
-  margin: 24px 0;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
   background: #e1e4e8;
+  border: 0;
   border-bottom: 1px solid #eee;
   box-sizing: content-box;
+  height: 0.25em;
+  margin: 24px 0;
+  overflow: hidden;
+  padding: 0;
 
   &::before {
-  	display: table;
   	content: "";
+  	display: table;
   }
 
   &::after {
-  	display: table;
   	clear: both;
   	content: "";
+  	display: table;
   }
 }
 
 table {
-  border-spacing: 0;
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
 td,
@@ -165,24 +159,24 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 24px;
-  margin-bottom: 16px;
   font-weight: 600;
   line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
 }
 
 h1 {
-  padding-bottom: 0.3em;
-  font-size: 2em;
   border-bottom: 1px solid #eaecef;
+  font-size: 2em;
   font-weight: 600;
+  padding-bottom: 0.3em;
 }
 
 h2 {
-  padding-bottom: 0.3em;
-  font-size: 1.5em;
   border-bottom: 1px solid #eaecef;
+  font-size: 1.5em;
   font-weight: 600;
+  padding-bottom: 0.3em;
 }
 
 h3 {
@@ -201,9 +195,9 @@ h5 {
 }
 
 h6 {
+  color: #6a737d;
   font-weight: 600;
   font-size: 0.85em;
-  color: #6a737d;
 }
 
 p {
@@ -213,9 +207,9 @@ p {
 
 ul,
 ol {
-  padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 0;
 
   ol {
   	list-style-type: lower-roman;
@@ -242,19 +236,23 @@ code {
   background: darken($background-color, 7%);
   border-radius: $border-radius-base;
   margin-bottom: 5px;
+
   .progress-bar {
     background: $color-primary;
+    border-radius: $border-radius-base;
+    display: block;
+    color: $background-color;
     padding: 2px;
     text-align: center;
-    color: $background-color;
-    display: block;
-    border-radius: $border-radius-base;
+
     &.progress-success {
       background: $color-success;
     }
+
     &.progress-warning {
       background: $color-warning;
     }
+
     &.progress-danger {
       background: $color-danger;
     }
@@ -272,13 +270,15 @@ table {
 }
 
 blockquote {
+  border-left: 0.25em solid #dfe2e5;
+  color: #6a737d;
   margin: 0;
   padding: 0 1em;
-  color: #6a737d;
-  border-left: 0.25em solid #dfe2e5;
+
   > :first-child {
     margin-top: 0;
   }
+
   > :last-child {
     margin-bottom: 0;
   }
@@ -293,15 +293,17 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin-top: 0;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 li {
   word-wrap: break-all;
+
   > p {
     margin-top: 16px;
   }
+
   + li {
     margin-top: 0.25em;
   }
@@ -309,48 +311,56 @@ li {
 
 dl {
   padding: 0;
+
   dt {
-    padding: 0;
-    margin-top: 16px;
     font-size: 1em;
     font-style: italic;
     font-weight: 600;
+    margin-top: 16px;
+    padding: 0;
   }
+
   dd {
-    padding: 0 16px;
     margin-bottom: 16px;
+    padding: 0 16px;
   }
 }
 
 table {
   display: block;
-  width: 100%;
   overflow: auto;
+  width: 100%;
+
   th {
     font-weight: 600;
   }
+
   tr {
     background-color: #fff;
     border-top: 1px solid #c6cbd1;
+
     &:nth-child(2n) {
       background-color: #f6f8fa;
     }
   }
-  th, td {
-    padding: 6px 13px;
+
+  th,
+  td {
     border: 1px solid #dfe2e5;
+    padding: 6px 13px;
   }
 }
 
 img {
-  border-style: none;
-  max-width: 100%;
-  box-sizing: content-box;
   background-color: #fff;
+  border-style: none;
+  box-sizing: content-box;
+  max-width: 100%;
 
   &[align=right] {
   	padding-left: 20px;
   }
+
   &[align=left] {
 	  padding-right: 20px;
 	}
@@ -358,11 +368,13 @@ img {
 
 .btn {
   background: $color-primary;
+  border-radius: $border-radius-base;
   color: $background-color;
   padding: 10px 20px;
-  border-radius: $border-radius-base;
 
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     background: darken($color-primary, $link-hover-change);
     text-decoration: none;
   }
@@ -370,7 +382,10 @@ img {
   &-success {
     background: $color-success;
     color: $background-color;
-    &:hover, &:focus, &:active {
+
+    &:hover,
+    &:focus,
+    &:active {
       background: darken($color-success, $link-hover-change);
     }
   }
@@ -378,7 +393,10 @@ img {
   &-warning {
     background: $color-warning;
     color: $background-color;
-    &:hover, &:focus, &:active {
+
+    &:hover,
+    &:focus,
+    &:active {
       background: darken($color-warning, $link-hover-change);
     }
   }
@@ -386,55 +404,60 @@ img {
   &-danger {
     background: $color-danger;
     color: $background-color;
-    &:hover, &:focus, &:active {
+
+    &:hover,
+    &:focus,
+    &:active {
       background: darken($color-danger, $link-hover-change);
     }
   }
 }
 
 pre {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  padding: 16px;
-  overflow: auto;
-  white-space: pre-line;
-  font-size: 85%;
-  line-height: 1.45;
   background-color: #f6f8fa;
   border-radius: $border-radius-base;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 85%;
+  line-height: 1.45;
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: auto;
+  padding: 16px;
+  white-space: pre-line;
 }
 
 .full-commit .btn-outline:not(:disabled):hover {
-  color: #005cc5;
   border-color: #005cc5;
+  color: #005cc5;
 }
 
 kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  line-height: 10px;
-  color: #444d56;
-  vertical-align: middle;
   background-color: #fafbfc;
   border: solid 1px #d1d5da;
   border-bottom-color: #c6cbd1;
   border-radius: $border-radius-base;
   box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
 }
 
 :checked + .radio-label {
+  border-color: #0366d6;
   position: relative;
   z-index: 1;
-  border-color: #0366d6;
 }
 
 .task-list-item {
   list-style-type: none;
+
   + .task-list-item {
     margin-top: 3px;
   }
+
   input {
     margin: 0 0.2em 0.25em -1.6em;
     vertical-align: middle;
@@ -443,20 +466,20 @@ kbd {
 
 .content {
 	box-sizing: border-box;
-	min-width: 200px;
-	max-width: 980px;
 	margin: 0 auto;
+	max-width: 980px;
+	min-width: 200px;
 	padding: 45px;
 
 	&::before {
-		display: table;
 		content: "";
+		display: table;
 	}
 
 	&::after {
-		display: table;
 		clear: both;
 		content: "";
+		display: table;
 	}
 
 	> *:first-child {

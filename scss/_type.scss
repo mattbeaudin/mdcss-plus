@@ -45,6 +45,19 @@ h6 {
   font-size: 0.85em;
 }
 
+a {
+  color: $color-primary;
+  background-color: transparent;
+  text-decoration: none;
+  transition: .5s;
+
+  &:hover,
+  &:active {
+    outline-width: 0;
+  	text-decoration: underline;
+  }
+}
+
 p {
   margin-top: 0;
   margin-bottom: 16px;

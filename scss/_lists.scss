@@ -1,0 +1,60 @@
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-left: 2em;
+
+  ol {
+  	list-style-type: lower-roman;
+  }
+}
+
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+li {
+  word-wrap: break-all;
+
+  > p {
+    margin-top: 16px;
+  }
+
+  + li {
+    margin-top: 0.25em;
+  }
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+dd {
+  margin-left: 0;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding: 0;
+
+  dt {
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 16px;
+    padding: 0;
+  }
+
+  dd {
+    margin-bottom: 16px;
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,27 @@
+.progress {
+	background: darken($background-color, 7%);
+	border-radius: $border-radius-base;
+	margin-bottom: 5px;
+
+	.progress-bar {
+		background: $color-primary;
+		border-radius: $border-radius-base;
+		color: $background-color;
+		display: block;
+		padding: 2px;
+		text-align: center;
+
+		&.progress-success {
+			background: $color-success;
+		}
+
+		&.progress-warning {
+			background: $color-warning;
+		}
+
+		&.progress-danger {
+			background: $color-danger;
+		}
+	}
+}
+  

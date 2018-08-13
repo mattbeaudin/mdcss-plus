@@ -1,0 +1,33 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  margin-bottom: 16px;
+  margin-top: 0;
+  overflow: auto;
+  width: 100%;
+
+  th {
+    font-weight: 600;
+  }
+
+  tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+
+    &:nth-child(2n) {
+      background-color: #f6f8fa;
+    }
+  }
+
+  th,
+  td {
+    border: 1px solid #dfe2e5;
+    padding: 6px 13px;
+  }
+}
+
+td,
+th {
+  padding: 0;
+}

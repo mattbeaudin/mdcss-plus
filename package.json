@@ -3,7 +3,9 @@
   "version": "1.0.1",
   "description": "SASS/CSS library that emulates the look of GitHub Markdown with a few more added features.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sass scss/mdcss-plus.scss dist/css/mdcss-plus.css && npm run minify",
+    "minify": "cleancss --level 1 --output dist/css/mdcss-plus.min.css dist/css/mdcss-plus.css --source-map",
+    "watch": "sass --watch scss/mdcss-plus.scss dist/css/mdcss-plus.css"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/mattbeaudin/mdcss-plus/issues"
   },
-  "homepage": "https://matthewbeaud.in/mdcss-plus"
+  "homepage": "https://matthewbeaud.in/mdcss-plus",
+  "devDependencies": {
+    "clean-css-cli": "^4.2.1",
+    "sass": "^1.13.0"
+  }
 }
